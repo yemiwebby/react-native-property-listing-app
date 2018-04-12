@@ -81,6 +81,7 @@ export default class SearchPage extends Component<{}> {
               <Text style={styles.description}>
                   Search for houses to buy!
               </Text>
+
               <Text style={styles.description}>
                  Search for place-name or postcode.
               </Text>
@@ -102,6 +103,7 @@ export default class SearchPage extends Component<{}> {
               {spinner} 
               
               <Text style={styles.description}>{this.state.message}</Text>
+              
             </View>
         )
     }
