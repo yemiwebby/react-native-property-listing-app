@@ -16,9 +16,8 @@ import SearchPage from './searchPage';
 import SearchResults from './SearchResults';
 
 const App = StackNavigator({
-
   Home: { screen: SearchPage },
   Results: { screen: SearchResults },
-  
 });
+
 export default App;
