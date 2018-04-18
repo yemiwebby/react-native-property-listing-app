@@ -13,7 +13,7 @@ import {
 function urlForQueryAndPage(key, value, pageNumber) {
     const data = {
         country: 'uk',
-        pretty: '1',
+        pretty: '2',
         encoding: 'json',
         listing_type: 'buy',
         action: 'search_listings',
@@ -24,7 +24,6 @@ function urlForQueryAndPage(key, value, pageNumber) {
     const querystring = Object.keys(data)
     .map(key => key + '=' + encodeURIComponent(data[key]))
     .join('&');
-
     return 'https://api.nestoria.co.uk/api?' + querystring;
 }
 
@@ -68,7 +67,7 @@ export default class SearchPage extends Component<{}> {
             this.setState({message: 'Location not recognized; please try again.'});
         }
     };
-    
+
 
     _onSearchPressed = () => {
         const query = urlForQueryAndPage('place_name', this.state.searchString, 1);
