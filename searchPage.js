@@ -68,6 +68,7 @@ export default class SearchPage extends Component<{}> {
             this.setState({message: 'Location not recognized; please try again.'});
         }
     };
+    
 
     _onSearchPressed = () => {
         const query = urlForQueryAndPage('place_name', this.state.searchString, 1);
